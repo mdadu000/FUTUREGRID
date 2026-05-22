@@ -542,7 +542,7 @@ const BG_INITS: Init[] = [
   bg4,          // 4 Classes
   bgUseCases,   // 5 Use Cases
   bgMinimal,    // 6 Team
-  bg11          // 7 Finale
+  bgMinimal     // 7 Finale
 ];
 
 export function SlideBackground({ index }: { index: number }) {
