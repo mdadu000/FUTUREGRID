@@ -8,9 +8,9 @@ const FAMILIES = [
     subtitle: "Poor Classes",
     color: "#991b1b",
     classes: [
-      { id: "C1", name: "Extreme Poor", income: "< Rs.8,000/mo", desc: "Survival mode, zero savings", range: 15 },
-      { id: "C2", name: "Poor", income: "Rs.8,000–15,000", desc: "Basic needs met, no growth", range: 35 },
-      { id: "C3", name: "Lower Poor", income: "Rs.15,000–22,000", desc: "Stable, emerging capacity", range: 55 },
+      { id: "C1", name: "Extreme Poor", income: "< Rs.8,000/mo", desc: "Survival mode, zero savings, food insecure", range: 15 },
+      { id: "C2", name: "Poor", income: "Rs.8,000–15,000", desc: "Basic nutrition met, zero health safety net", range: 35 },
+      { id: "C3", name: "Lower Poor", income: "Rs.15,000–22,000", desc: "Shelter security, high micro-debt vulnerability", range: 55 },
     ]
   },
   {
@@ -18,9 +18,9 @@ const FAMILIES = [
     subtitle: "Middle Classes",
     color: "#d97706",
     classes: [
-      { id: "C4", name: "Lower Middle", income: "Rs.22,000–40,000", desc: "Survival mode, zero savings", range: 45 },
-      { id: "C5", name: "Middle Class", income: "Rs.40,000–75,000", desc: "Basic needs met, no growth", range: 65 },
-      { id: "C6", name: "Upper Middle", income: "Rs.75,000–1.5L", desc: "Stable, emerging capacity", range: 85 },
+      { id: "C4", name: "Lower Middle", income: "Rs.22,000–40,000", desc: "EMI dependent, vulnerable to minor shocks", range: 45 },
+      { id: "C5", name: "Middle Class", income: "Rs.40,000–75,000", desc: "Formal employment, insurance & education focus", range: 65 },
+      { id: "C6", name: "Upper Middle", income: "Rs.75,000–1.5L", desc: "Active equity investments, robust savings rates", range: 85 },
     ]
   },
   {
@@ -28,9 +28,9 @@ const FAMILIES = [
     subtitle: "Rich Classes",
     color: "#166534",
     classes: [
-      { id: "C7", name: "Rich", income: "Rs.1.5L–3L", desc: "Survival mode, zero savings", range: 40 },
-      { id: "C8", name: "Very Rich", income: "Rs.3L–10L", desc: "Basic needs met, no growth", range: 70 },
-      { id: "C9", name: "Elite", income: "> Rs.10L/mo", desc: "Stable, emerging capacity", range: 100 },
+      { id: "C7", name: "Rich", income: "Rs.1.5L–3L", desc: "Premium lifestyles, diverse real estate portfolio", range: 40 },
+      { id: "C8", name: "Very Rich", income: "Rs.3L–10L", desc: "Corporate leadership, direct private equity investments", range: 70 },
+      { id: "C9", name: "Elite", income: "> Rs.10L/mo", desc: "Generational wealth, global capital exposure", range: 100 },
     ]
   }
 ];

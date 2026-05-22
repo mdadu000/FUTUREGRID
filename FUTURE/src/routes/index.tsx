@@ -6,10 +6,10 @@ import { ThreeBackground } from "@/components/ui-fg/ThreeBackground";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "FUTURE GRID — by Team FEUGO" },
-      { name: "description", content: "FUTURE GRID — a predictive AI society simulation engine. Built by Team FEUGO." },
-      { property: "og:title", content: "FUTURE GRID — by Team FEUGO" },
-      { property: "og:description", content: "Predictive AI Society Simulation. Built by Team FEUGO." },
+      { title: "FUTURE GRID — by Team 9-ELEVEN" },
+      { name: "description", content: "FUTURE GRID — a predictive AI society simulation engine. Built by Team 9-ELEVEN." },
+      { property: "og:title", content: "FUTURE GRID — by Team 9-ELEVEN" },
+      { property: "og:description", content: "Predictive AI Society Simulation. Built by Team 9-ELEVEN." },
     ],
     links: [
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -23,7 +23,6 @@ export const Route = createFileRoute("/")({
 const TEAM = [
   { name: "MOHAMMED AASIM ALI", role: "SYSTEM ARCHITECT" },
   { name: "MOHAMMED ADNAN", role: "DATA ENGINEER" },
-  { name: "MOHAMMED NABEEL", role: "SIMULATION LEAD" },
   { name: "MOHAMMED HUZAIF MUEEZ", role: "AI SPECIALIST" },
 ];
 
@@ -53,7 +52,7 @@ function Landing() {
         >
           <span className="w-1.5 h-1.5 rounded-full bg-cyan animate-pulse-glow" />
           <span className="text-muted-foreground">Presented by Team</span>
-          <span className="text-gradient-primary font-semibold">FEUGO</span>
+          <span className="text-gradient-primary font-semibold">9-ELEVEN</span>
         </motion.div>
 
         {/* Title */}
@@ -108,14 +107,14 @@ function Landing() {
           <div className="text-[10px] uppercase tracking-[0.4em] text-muted-foreground mb-3">
             Team Members
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+          <div className="grid grid-cols-3 gap-3">
             {TEAM.map((member, i) => (
               <motion.div
                 key={member.name}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 1 + i * 0.1 }}
-                className="group glass-strong rounded-xl p-4 hover:translate-y-[-4px] transition-all duration-500 border border-white/5 relative overflow-hidden"
+                className="group rounded-xl p-4 hover:translate-y-[-4px] transition-all duration-500 border border-white/10 relative overflow-hidden bg-transparent backdrop-blur-sm"
               >
                 <div className="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 <div className="mx-auto mb-3 relative w-12 h-12 rounded-lg bg-gradient-primary shadow-glow flex items-center justify-center">
@@ -136,7 +135,7 @@ function Landing() {
         transition={{ delay: 1.5, duration: 1 }}
         className="relative z-10 py-3 text-center text-[10px] tracking-[0.4em] uppercase text-muted-foreground"
       >
-        © FEUGO · Future Grid
+        © 9-ELEVEN · Future Grid
       </motion.footer>
     </main>
   );

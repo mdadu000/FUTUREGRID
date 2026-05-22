@@ -52,11 +52,17 @@ export function ObjectivesSection() {
         <div className="lg:col-span-7 grid md:grid-cols-2 gap-4">
           {OBJECTIVES.map((obj, i) => (
             <Reveal key={obj.id} delay={i * 0.05} x={-20}>
-              <div className="group relative p-6 rounded-2xl bg-white/[0.02] border border-white/5 hover:border-cyan-500/30 transition-all duration-500 overflow-hidden">
+              <motion.div 
+                whileHover={{ y: -6, scale: 1.02, borderColor: "rgba(6, 182, 212, 0.4)", boxShadow: "0 10px 30px -10px rgba(6, 182, 212, 0.2)" }}
+                className="group relative p-6 rounded-2xl bg-white/[0.03] backdrop-blur-md border border-white/5 transition-all duration-500 overflow-hidden"
+              >
                 {/* Background ID number */}
                 <div className="absolute -top-4 -right-2 text-7xl font-display font-black text-white/[0.02] group-hover:text-cyan-500/[0.05] transition-colors">
                   {obj.id}
                 </div>
+                
+                {/* Subtle backlight glow */}
+                <div className="absolute -bottom-20 -left-20 w-40 h-40 rounded-full opacity-0 group-hover:opacity-[0.04] transition-opacity duration-500 blur-2xl bg-cyan" />
                 
                 <div className="relative z-10">
                   <div className="flex items-center gap-3 mb-3">
@@ -73,8 +79,8 @@ export function ObjectivesSection() {
                 </div>
                 
                 {/* Connector line effect */}
-                <div className="absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-cyan-500 to-transparent w-0 group-hover:w-full transition-all duration-700" />
-              </div>
+                <div className="absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-cyan-500 to-transparent w-0 group-hover:w-full transition-all duration-750" />
+              </motion.div>
             </Reveal>
           ))}
         </div>
