@@ -541,7 +541,7 @@ const BG_INITS: Init[] = [
   bg3,          // 3 How It Works
   bg4,          // 4 Classes
   bgUseCases,   // 5 Use Cases
-  bg10,         // 6 Team
+  bgMinimal,    // 6 Team
   bg11          // 7 Finale
 ];
 
