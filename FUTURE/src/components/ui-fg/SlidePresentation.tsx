@@ -15,21 +15,20 @@ const slideVariants = {
     x: 0,
     opacity: 1,
     scale: 1,
-    transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1] as const },
+    transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1] },
   },
   exit: (dir: number) => ({
     x: dir > 0 ? "-100%" : "100%",
     opacity: 0,
     scale: 0.96,
-    transition: { duration: 0.45, ease: [0.22, 1, 0.36, 1] as const },
+    transition: { duration: 0.45, ease: [0.22, 1, 0.36, 1] },
   }),
 };
 
 /* ─── Slide labels ───────────────────────────────────────────────────────── */
 const SLIDE_LABELS = [
   "Problem", "Objectives", "Solution", "How It Works",
-  "Classes", "Agent Intelligence", "Live Demo", "System Design",
-  "Societal Impact", "Use Cases", "Team", "Finale",
+  "Classes", "Use Cases", "Team", "Finale",
 ];
 
 /* ─── Main Component ─────────────────────────────────────────────────────── */

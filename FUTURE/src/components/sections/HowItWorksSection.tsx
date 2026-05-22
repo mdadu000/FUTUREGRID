@@ -1,6 +1,5 @@
 import { Section } from "../ui-fg/Section";
 import { Reveal } from "../ui-fg/Reveal";
-import { motion } from "framer-motion";
 
 const steps = [
   { n: "01", t: "User Enters Scenario", d: "Type any real-world event in plain language." },
@@ -29,52 +28,18 @@ export function HowItWorksSection() {
       </Reveal>
 
       <div className="relative">
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-5">
+        <div className="hidden md:block absolute top-[42px] left-[8%] right-[8%] h-px bg-gradient-to-r from-transparent via-electric/60 to-transparent" />
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-5">
           {steps.map((s, i) => (
             <Reveal key={s.n} delay={i * 0.12}>
-              <div className="relative flex flex-col items-center">
-                {/* Numbered circle/box */}
+              <div className="relative">
                 <div className="relative z-10 mx-auto w-[84px] h-[84px] rounded-2xl glass-strong glow-border flex items-center justify-center font-display font-bold text-2xl text-gradient-primary mb-5 shadow-glow">
                   {s.n}
                 </div>
-                
-                {/* Content */}
-                <div className="text-center relative z-10">
-                  <div className="font-semibold mb-1.5 text-white">{s.t}</div>
+                <div className="text-center">
+                  <div className="font-semibold mb-1.5">{s.t}</div>
                   <div className="text-sm text-muted-foreground leading-relaxed">{s.d}</div>
                 </div>
-
-                {/* Horizontal arrow for desktop (md+) */}
-                {i < steps.length - 1 && (
-                  <div className="hidden md:flex absolute top-[42px] left-[50%] w-[calc(100%+1.25rem)] h-px items-center justify-center z-0 pointer-events-none">
-                    <div className="w-full h-[2px] bg-gradient-to-r from-cyan-500/40 via-purple-500/40 to-cyan-500/40" />
-                    <motion.div 
-                      animate={{ scale: [1, 1.15, 1], opacity: [0.7, 1, 0.7] }}
-                      transition={{ duration: 2, repeat: Infinity, ease: "easeInOut", delay: i * 0.2 }}
-                      className="absolute left-[50%] -translate-x-1/2 bg-black border border-cyan-500/30 rounded-full p-1 shadow-glow-cyan/20"
-                    >
-                      <svg className="w-3 h-3 text-cyan" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-                      </svg>
-                    </motion.div>
-                  </div>
-                )}
-
-                {/* Vertical arrow for mobile (<md) */}
-                {i < steps.length - 1 && (
-                  <div className="md:hidden flex flex-col items-center justify-center my-6 pointer-events-none">
-                    <div className="w-[2px] h-8 bg-gradient-to-b from-cyan-500/40 to-purple-500/40" />
-                    <motion.div 
-                      animate={{ scale: [1, 1.15, 1], opacity: [0.7, 1, 0.7] }}
-                      transition={{ duration: 2, repeat: Infinity, ease: "easeInOut", delay: i * 0.2 }}
-                      className="bg-black border border-cyan-500/30 rounded-full p-1 my-1 shadow-glow-cyan/20"
-                    >
-                      <svg className="w-3 h-3 text-cyan" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-                      </svg>
-                    </motion.div>
-                  </div>
-                )}
               </div>
             </Reveal>
           ))}

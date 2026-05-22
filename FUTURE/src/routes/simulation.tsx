@@ -17,7 +17,7 @@ export const Route = createFileRoute("/simulation")({
   head: () => ({
     meta: [
       { title: "FUTURE GRID — Predictive AI Society Simulation" },
-      { name: "description", content: "Full presentation: 500 AI agents, 9 economic classes, 3-tier AI brain. Built by Team 9-ELEVEN." },
+      { name: "description", content: "Full presentation: 500 AI agents, 9 economic classes, 3-tier AI brain. Built by Team FEUGO." },
       { property: "og:title", content: "FUTURE GRID — The Simulation" },
       { property: "og:description", content: "500 AI agents · 9 economic classes · 3-tier AI brain. Simulate reality before you ship." },
     ],
@@ -31,10 +31,6 @@ const SLIDES = [
   <SolutionSection key="solution" />,
   <HowItWorksSection key="how" />,
   <ClassesSection key="classes" />,
-  <AgentSection key="agents" />,
-  <DemoSection key="demo" />,
-  <TechSection key="tech" />,
-  <ImpactSection key="impact" />,
   <UseCasesSection key="usecases" />,
   <TeamSection key="team" />,
   <CTASection key="cta" />,

@@ -30,13 +30,13 @@ export const Route = createRootRoute({
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "FUTURE GRID — Predictive AI Society Simulation" },
-      { name: "description", content: "FUTURE GRID — a predictive AI society simulation engine. Test human behavior before testing the real world. Built by Team 9-ELEVEN." },
-      { name: "author", content: "Team 9-ELEVEN" },
-      { property: "og:title", content: "FUTURE GRID — by Team 9-ELEVEN" },
+      { name: "description", content: "FUTURE GRID — a predictive AI society simulation engine. Test human behavior before testing the real world. Built by Team FEUGO." },
+      { name: "author", content: "Team FEUGO" },
+      { property: "og:title", content: "FUTURE GRID — by Team FEUGO" },
       { property: "og:description", content: "500 AI agents · 9 economic classes · 3-tier AI brain. Simulate reality before you ship." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Team9ELEVEN" },
+      { name: "twitter:site", content: "@TeamFEUGO" },
     ],
     links: [
       {

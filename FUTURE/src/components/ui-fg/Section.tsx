@@ -8,11 +8,9 @@ interface SectionProps {
   eyebrow?: string;
   title?: ReactNode;
   subtitle?: ReactNode;
-  titleClassName?: string;
-  subtitleClassName?: string;
 }
 
-export function Section({ id, children, className = "", eyebrow, title, subtitle, titleClassName, subtitleClassName }: SectionProps) {
+export function Section({ id, children, className = "", eyebrow, title, subtitle }: SectionProps) {
   return (
     <section
       id={id}
@@ -24,7 +22,7 @@ export function Section({ id, children, className = "", eyebrow, title, subtitle
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-          className="relative z-20 mb-6 max-w-4xl"
+          className="mb-6 max-w-4xl"
         >
           {eyebrow && (
             <div className="inline-flex items-center gap-2 mb-5 px-3 py-1.5 rounded-full glass text-xs uppercase tracking-[0.2em] text-cyan">
@@ -33,12 +31,12 @@ export function Section({ id, children, className = "", eyebrow, title, subtitle
             </div>
           )}
           {title && (
-            <h2 className={`text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.05] ${titleClassName ?? "text-gradient"}`}>
+            <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.05] text-gradient">
               {title}
             </h2>
           )}
           {subtitle && (
-            <p className={`mt-5 text-lg md:text-xl max-w-2xl leading-relaxed ${subtitleClassName ?? "text-muted-foreground"}`}>
+            <p className="mt-5 text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed">
               {subtitle}
             </p>
           )}

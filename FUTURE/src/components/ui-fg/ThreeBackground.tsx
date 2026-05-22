@@ -58,7 +58,9 @@ function DataNetwork() {
           <bufferGeometry>
             <bufferAttribute
               attach="attributes-position"
-              args={[positionsArray, 3]}
+              count={positionsArray.length / 3}
+              array={positionsArray}
+              itemSize={3}
             />
           </bufferGeometry>
           <pointsMaterial size={0.06} color="#00e5ff" transparent opacity={0.8} sizeAttenuation />
