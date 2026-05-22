@@ -16,24 +16,45 @@ export function UseCasesSection() {
     <Section
       id="usecases"
       eyebrow="Applications"
-      title={<>Built for <span className="text-white">decision makers.</span></>}
+      title={<>Built for <span className="text-cyan">decision makers.</span></>}
+      titleClassName="text-white"
       subtitle="From boardrooms to policy halls — anywhere a decision touches human behavior."
+      subtitleClassName="text-white/90"
       className="relative overflow-hidden bg-black"
     >
-      {/* Premium Realistic Background - High Impact Visual */}
+      {/* Premium 3D Animated Background */}
       <div className="absolute inset-0 z-0 overflow-hidden">
-        <motion.img 
-          initial={{ scale: 1.2, opacity: 0 }}
-          whileInView={{ scale: 1, opacity: 0.6 }}
-          transition={{ duration: 2, ease: "easeOut" }}
-          src="/solution-final.png" 
-          alt="Applications Background" 
-          className="w-full h-full object-cover"
-          style={{ filter: 'brightness(0.6) saturate(0.9) contrast(1.1)' }}
+        {/* Base gradient */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0a0a1a] via-[#0d0d2b] to-[#0a0a1a]" />
+        
+        {/* Animated grid floor */}
+        <div className="absolute inset-0 opacity-15" style={{ perspective: '800px' }}>
+          <div className="absolute inset-0 grid-bg animate-grid-move" style={{ transform: 'rotateX(45deg)', transformOrigin: 'center top' }} />
+        </div>
+        
+        {/* Floating 3D orbs */}
+        <motion.div
+          animate={{ x: [0, 40, 0], y: [0, -30, 0], scale: [1, 1.2, 1] }}
+          transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute top-[15%] right-[10%] w-[400px] h-[400px] rounded-full"
+          style={{ background: 'radial-gradient(circle, oklch(0.72 0.18 250 / 15%), transparent 70%)' }}
         />
-        {/* Localized Top-Left Dark Mask */}
-        <div className="absolute top-0 left-0 w-2/3 h-2/3 bg-gradient-to-br from-black via-black/40 to-transparent z-10" />
-        <div className="absolute inset-0 bg-radial-vignette opacity-80 z-10" />
+        <motion.div
+          animate={{ x: [0, -30, 0], y: [0, 40, 0], scale: [1, 1.15, 1] }}
+          transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute bottom-[10%] left-[5%] w-[350px] h-[350px] rounded-full"
+          style={{ background: 'radial-gradient(circle, oklch(0.84 0.16 200 / 12%), transparent 70%)' }}
+        />
+        <motion.div
+          animate={{ x: [0, 25, 0], y: [0, 25, 0] }}
+          transition={{ duration: 18, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute top-[50%] left-[50%] w-[500px] h-[500px] rounded-full -translate-x-1/2 -translate-y-1/2"
+          style={{ background: 'radial-gradient(circle, oklch(0.65 0.24 295 / 8%), transparent 70%)' }}
+        />
+
+        {/* Subtle horizontal light streaks */}
+        <div className="absolute top-[30%] left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-500/10 to-transparent" />
+        <div className="absolute top-[70%] left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-500/8 to-transparent" />
       </div>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 relative z-10">
@@ -41,13 +62,13 @@ export function UseCasesSection() {
           <Reveal key={c.title} delay={i * 0.06}>
             <motion.div 
               whileHover={{ y: -10, scale: 1.02 }}
-              className="group relative h-full rounded-[2.5rem] bg-white/[0.03] backdrop-blur-md p-8 overflow-hidden border border-white/10 hover:border-cyan-500/50 hover:shadow-glow transition-all duration-500"
+              className="group relative h-full rounded-[2.5rem] bg-white/[0.06] backdrop-blur-xl p-8 overflow-hidden border border-white/10 hover:border-cyan-500/40 hover:shadow-glow transition-all duration-500"
             >
-              {/* Animated 3D Glow Background */}
+              {/* Hover glow */}
               <div className={`absolute -top-24 -right-24 w-64 h-64 rounded-full opacity-0 group-hover:opacity-20 transition-opacity duration-700 blur-[80px] bg-${c.accent}-500`} />
               
               <div className="relative z-10">
-                <div className="w-16 h-16 rounded-2xl bg-white/[0.03] border border-white/10 flex items-center justify-center text-4xl mb-6 shadow-inner group-hover:shadow-glow transition-all">
+                <div className="w-16 h-16 rounded-2xl bg-white/[0.06] border border-white/10 flex items-center justify-center text-4xl mb-6 group-hover:shadow-glow transition-all">
                   {c.icon}
                 </div>
                 
@@ -55,12 +76,12 @@ export function UseCasesSection() {
                   {c.title}
                 </h3>
                 
-                <p className="text-base text-muted-foreground leading-relaxed font-medium">
+                <p className="text-base text-white/80 leading-relaxed font-medium">
                   {c.desc}
                 </p>
               </div>
 
-              {/* Decorative 3D Corner Accent */}
+              {/* Corner accent */}
               <div className="absolute bottom-0 right-0 w-12 h-12 bg-gradient-to-br from-transparent to-white/5 rounded-tl-3xl opacity-50" />
             </motion.div>
           </Reveal>

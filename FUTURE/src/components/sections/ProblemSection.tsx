@@ -49,27 +49,33 @@ export function ProblemSection() {
         </div>
       </Reveal>
 
-      {/* Main Feature Cards Grid */}
+      {/* Main Feature Cards Grid - Upgraded to Premium 3D Glass Cards */}
       <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
         {cards.map((card, i) => (
           <Reveal key={card.title} delay={0.2 + i * 0.05}>
-            <div className="h-full border border-red-900/30 bg-transparent rounded-lg p-5 hover:border-red-500/50 hover:bg-red-950/10 transition-all duration-300 group relative overflow-hidden">
+            <motion.div 
+              whileHover={{ y: -8, scale: 1.03, borderColor: "rgba(239, 68, 68, 0.4)", boxShadow: "0 10px 30px -10px rgba(239, 68, 68, 0.25)" }}
+              className="h-full border border-red-950/40 bg-white/[0.02] backdrop-blur-md rounded-2xl p-6 transition-all duration-500 group relative overflow-hidden"
+            >
               <div className="absolute top-0 left-0 w-[2px] h-0 bg-red-500 group-hover:h-full transition-all duration-300" />
-              <div className="text-red-400 font-display font-semibold text-lg mb-3 flex items-center gap-2">
+              {/* Outer glow background on hover */}
+              <div className="absolute -top-20 -right-20 w-40 h-40 rounded-full opacity-0 group-hover:opacity-10 transition-opacity duration-500 blur-2xl bg-red-500" />
+              
+              <div className="text-red-400 font-display font-semibold text-lg mb-3 flex items-center gap-2 relative z-10">
                 <span className="text-xl opacity-80">{card.icon}</span> {card.title}
               </div>
-              <p className="text-white/70 text-sm leading-relaxed">
+              <p className="text-white/75 text-sm leading-relaxed relative z-10">
                 {card.text}
               </p>
-            </div>
+            </motion.div>
           </Reveal>
         ))}
       </div>
 
-      {/* Bottom Layout: Questions (Attractive) & Problem Statement (Clean) */}
+      {/* Bottom Layout: Questions & Thesis */}
       <div className="mt-12 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
         
-        {/* Left: Unanswered Critical Questions (Unified) */}
+        {/* Left: Unanswered Critical Questions (Upgraded) */}
         <Reveal delay={0.4} className="lg:col-span-7">
           <div className="relative h-full py-4">
             <div className="flex items-center gap-4 mb-8">
@@ -111,11 +117,9 @@ export function ProblemSection() {
           </div>
         </Reveal>
 
-        {/* Right: Problem Statement (Minimal & Clean) */}
+        {/* Right: Thesis Thesis Statement */}
         <Reveal delay={0.6} className="lg:col-span-5 flex flex-col justify-start h-full lg:pl-12 pt-4 relative">
           <div className="relative">
-            {/* No divider or glow - completely unified */}
-            
             <div className="inline-flex items-center gap-2 mb-8 px-4 py-1.5 rounded-full bg-red-500/5 border border-red-500/10 text-[10px] font-black text-red-500 uppercase tracking-[0.3em]">
               Primary Thesis
             </div>
@@ -126,7 +130,7 @@ export function ProblemSection() {
             
             <div className="space-y-6">
               <p className="text-base text-muted-foreground leading-relaxed">
-                FutureGrid is the answer—an intelligent system built to simulate real societal behavior and adoption patterns <span className="text-white">before real money is spent</span>.
+                FutureGrid is the answer—an simulation platform built to predict real societal behavior and adoption patterns <span className="text-white font-medium">before capital is deployed</span>.
               </p>
               
               <div className="flex items-center gap-4 py-4">

@@ -84,11 +84,11 @@ export function CTASection() {
               </div>
               <div className="mt-4 flex items-center justify-center gap-3">
                 <div className="h-px w-16 bg-gradient-to-r from-transparent to-cyan/60" />
-                <span className="text-sm uppercase tracking-[0.4em] text-cyan font-semibold">Team FEUGO</span>
+                <span className="text-sm uppercase tracking-[0.4em] text-cyan font-semibold">Team 9-ELEVEN</span>
                 <div className="h-px w-16 bg-gradient-to-l from-transparent to-cyan/60" />
               </div>
               <p className="mt-4 text-muted-foreground text-sm tracking-wide">
-                Mohammed Aasim Ali · Mohammed Adnan · Mohammed Nabeel · Mohammed Huzaif Mueez
+                Mohammed Aasim Ali · Mohammed Adnan · Mohammed Huzaif Mueez
               </p>
             </div>
           </div>
