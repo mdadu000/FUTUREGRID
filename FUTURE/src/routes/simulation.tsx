@@ -4,11 +4,7 @@ import { ProblemSection } from "@/components/sections/ProblemSection";
 import { ObjectivesSection } from "@/components/sections/ObjectivesSection";
 import { HowItWorksSection } from "@/components/sections/HowItWorksSection";
 import { ClassesSection } from "@/components/sections/ClassesSection";
-import { AgentSection } from "@/components/sections/AgentSection";
-import { DemoSection } from "@/components/sections/DemoSection";
 import { UseCasesSection } from "@/components/sections/UseCasesSection";
-import { TechSection } from "@/components/sections/TechSection";
-import { ImpactSection } from "@/components/sections/ImpactSection";
 import { TeamSection } from "@/components/sections/TeamSection";
 import { SolutionSection } from "@/components/sections/SolutionSection";
 import { CTASection } from "@/components/sections/CTASection";
@@ -31,10 +27,6 @@ const SLIDES = [
   <SolutionSection key="solution" />,
   <HowItWorksSection key="how" />,
   <ClassesSection key="classes" />,
-  <AgentSection key="agents" />,
-  <DemoSection key="demo" />,
-  <TechSection key="tech" />,
-  <ImpactSection key="impact" />,
   <UseCasesSection key="usecases" />,
   <TeamSection key="team" />,
   <CTASection key="cta" />,

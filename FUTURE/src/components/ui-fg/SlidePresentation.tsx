@@ -28,8 +28,7 @@ const slideVariants = {
 /* ─── Slide labels ───────────────────────────────────────────────────────── */
 const SLIDE_LABELS = [
   "Problem", "Objectives", "Solution", "How It Works",
-  "Classes", "Agent Intelligence", "Live Demo", "System Design",
-  "Societal Impact", "Use Cases", "Team", "Finale",
+  "Classes", "Use Cases", "Team", "Finale",
 ];
 
 /* ─── Main Component ─────────────────────────────────────────────────────── */

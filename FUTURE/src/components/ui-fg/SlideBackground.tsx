@@ -540,13 +540,9 @@ const BG_INITS: Init[] = [
   bgSolution,   // 2 Solution
   bg3,          // 3 How It Works
   bg4,          // 4 Classes
-  bg5,          // 5 Agent Intelligence
-  bg6,          // 6 Live Demo
-  bg8,          // 7 System Design
-  bg9,          // 8 Societal Impact
-  bgUseCases,   // 9 Use Cases
-  bg10,         // 10 Team
-  bg11          // 11 Finale
+  bgUseCases,   // 5 Use Cases
+  bg10,         // 6 Team
+  bg11          // 7 Finale
 ];
 
 export function SlideBackground({ index }: { index: number }) {
